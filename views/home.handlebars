@@ -1,0 +1,45 @@
+<h1>Lista de posts:</h1>
+<a href="/create" class="main_link">Adicionar nova postagem</a><br>
+
+{{#each posts}}
+    <hr>
+    <h1>{{titulo}}</h1>
+    <p>{{conteudo}}</p>
+    <a href="/deletar/{{id}}"><button>Deletar</button></a>
+    <hr>
+{{/each}}
+
+<style>
+
+    #each {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+       
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    p {
+        font-size: 23px;
+    }
+
+    .main_link {
+         padding: 4px;
+        border: 1px solid black;
+        transition: 1s;
+        
+    }
+
+    .main_link:hover {
+        transform: scale(1.2)
+    }
+    small {
+        font-weight: 100;
+    }
+
+</style>
